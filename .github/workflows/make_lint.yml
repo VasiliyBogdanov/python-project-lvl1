@@ -15,8 +15,6 @@ jobs:
       run: make install
     - name: build
       run: make build
-    - name:  publish
-      run: make publish
     - name: package-install
       run: make package-install
     - name: run linter
