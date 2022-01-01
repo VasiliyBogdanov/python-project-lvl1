@@ -10,7 +10,7 @@ jobs:
     - name: Checkout repository content
       uses: actions/checkout@v2
     - name: Install dependencies
-      run: pip install poetry
+      run: pip install poetry --version 1.1.12
     - name: install
       run: make install
     - name: build
