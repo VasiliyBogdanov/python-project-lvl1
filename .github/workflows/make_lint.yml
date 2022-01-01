@@ -8,7 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository content
-      uses: actions/checkout@v2   
+      uses: actions/checkout@v2
+    - name: install
+      run: make install
+    - name: build
+      run: make build
+    - name:  publish
+      run: make publish
+    - name: package-install
+      run: make package-install
     - name: run linter
       run: make lint
  
