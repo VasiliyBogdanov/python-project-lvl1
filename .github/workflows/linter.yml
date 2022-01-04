@@ -6,8 +6,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: install dependencies
+    - name: install poetry
       run: pip install poetry
+    - name: install dependancies
+      run: make install
     - name: run linter
       run: make lint
  
