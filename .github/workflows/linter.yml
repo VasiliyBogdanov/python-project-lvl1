@@ -1,4 +1,4 @@
-name: wemake-python-styleguide
+name: linter
 on: 
   - push
   - pull_request
