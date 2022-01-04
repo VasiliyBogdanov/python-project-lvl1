@@ -1,4 +1,4 @@
-name: make_lint
+name: wemake-python-styleguide
 on: 
   - push
   - pull_request
