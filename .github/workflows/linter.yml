@@ -1,22 +1,13 @@
 name: linter
 on: 
   - push
-  - pull_request
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository content
-      uses: actions/checkout@v2
-    - name: Install dependencies
+    - name: install dependencies
       run: pip install poetry
-    - name: install
-      run: make install
-    - name: build
-      run: make build
-    - name: package-install
-      run: make package-install
     - name: run linter
       run: make lint
  
