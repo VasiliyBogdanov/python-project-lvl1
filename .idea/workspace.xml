@@ -7,12 +7,6 @@
     <list default="true" id="fe57504b-5101-4654-8220-277ce2db809d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brain_games/cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/cli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brain_games/games/answer_checker.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brain_games/games/brain_calc.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/games/brain_calc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brain_games/games/brain_even.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/games/brain_even.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brain_games/games/brain_gcd.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/games/brain_gcd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brain_games/games/brain_prime.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/games/brain_prime.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brain_games/games/brain_progression.py" beforeDir="false" afterPath="$PROJECT_DIR$/brain_games/games/brain_progression.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

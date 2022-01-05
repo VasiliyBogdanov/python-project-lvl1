@@ -7,6 +7,7 @@ def welcome_user():
     print('Hello, {0}!'.format(name))
     return name
 
+
 def check_answer(user_answer: str, correct_answer: str, username: str):
     """Check answer for games functions."""
     if user_answer.lower() == correct_answer.lower():
