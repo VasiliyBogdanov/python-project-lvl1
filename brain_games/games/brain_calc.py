@@ -1,4 +1,4 @@
-from brain_games.games.answer_checker import check_answer
+from brain_games.cli import check_answer
 import operator
 import prompt
 import random
