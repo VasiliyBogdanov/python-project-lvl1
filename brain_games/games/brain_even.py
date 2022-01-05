@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
+from brain_games.games.answer_checker import check_answer
 import prompt
 import random
-from brain_games.cli import check_answer, welcome, welcome_user
 
 
 def numbers_game(username: str):
@@ -11,6 +10,7 @@ def numbers_game(username: str):
         if correct_answer_count >= 3:
             print('Congratulations, {0}!'.format(username))
             break
+        # Inputs to next randint function is arbitrary.
         question = random.randint(1, 100)
         correct_answer = 'yes' if question % 2 == 0 else 'no'
         print('Question: {0}'.format(question))
@@ -21,13 +21,3 @@ def numbers_game(username: str):
             correct_answer_count += 1
         else:
             break
-
-
-def main():
-    welcome()
-    username = welcome_user()
-    numbers_game(username)
-
-
-if __name__ == '__main__':
-    main()

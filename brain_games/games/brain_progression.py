@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
+from brain_games.games.answer_checker import check_answer
 import prompt
 import random
-from brain_games.cli import check_answer, welcome, welcome_user
 
 
 def progression_game(username: str):
@@ -38,13 +37,3 @@ def progression_game(username: str):
             correct_answer_count += 1
         else:
             break
-
-
-def main():
-    welcome()
-    username = welcome_user()
-    progression_game(username)
-
-
-if __name__ == '__main__':
-    main()

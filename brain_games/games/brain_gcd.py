@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
+from brain_games.games.answer_checker import check_answer
 import math
-import prompt
 import random
-from brain_games.cli import check_answer, welcome, welcome_user
+import prompt
 
 
 def gcd_game(username):
@@ -12,6 +11,7 @@ def gcd_game(username):
         if correct_answer_count >= 3:
             print('Congratulations, {0}!'.format(username))
             break
+        # Inputs to next two randint functions are arbitrary.
         question_num1 = random.randint(1, 101)
         question_num2 = random.randint(1, 101)
         question = "{0} {1}".format(question_num1, question_num2)
@@ -24,13 +24,3 @@ def gcd_game(username):
             correct_answer_count += 1
         else:
             break
-
-
-def main():
-    welcome()
-    username = welcome_user()
-    gcd_game(username)
-
-
-if __name__ == '__main__':
-    main()
