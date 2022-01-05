@@ -1,17 +1,20 @@
-from brain_games.cli import check_answer
+from brain_games.answer_checker import check_answer
 import prompt
 import random
 
 
-def prime_game(username: str):
-    def is_prime(n):
-        """Return True if n is prime number."""
-        if n <= 1:
+def is_prime(n):
+    """Return True if n is prime number."""
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 1 / 2) + 1):
+        if n % i == 0:
             return False
-        for i in range(2, int(n ** 1 / 2) + 1):
-            if n % i == 0:
-                return False
-        return True
+    return True
+
+
+def prime_game(username: str):
+
     correct_answer_count = 0
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     while True:

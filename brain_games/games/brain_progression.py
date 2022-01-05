@@ -1,4 +1,4 @@
-from brain_games.cli import check_answer
+from brain_games.answer_checker import check_answer
 import prompt
 import random
 
@@ -19,7 +19,8 @@ def progression_game(username: str):
         output_question = "Question: "
         for i in progression:
             output_question += str(i) + " "
-        output_question = output_question.replace(str(progression[question_position]), "..")
+        output_question = output_question\
+            .replace(str(progression[question_position]), "..")
         return progression[question_position], output_question
 
     correct_answer_count = 0

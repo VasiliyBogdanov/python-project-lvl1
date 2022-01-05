@@ -1,4 +1,4 @@
-from brain_games.cli import check_answer
+from brain_games.answer_checker import check_answer
 import operator
 import prompt
 import random
@@ -16,8 +16,10 @@ def calc_game(username: str):
             '*': operator.mul,
         }
         random_operation_sign = random.choice(question_signs)
-        question = "{0} {1} {2}".format(question_num1, random_operation_sign, question_num2)
-        return operator_functions[random_operation_sign](question_num1, question_num2),\
+        question = "{0} {1} {2}"\
+            .format(question_num1, random_operation_sign, question_num2)
+        return operator_functions[random_operation_sign](question_num1,
+                                                         question_num2),\
             'Question: {0}'.format(question)
     correct_answer_count = 0
     print("What is the result of the expression? ")
