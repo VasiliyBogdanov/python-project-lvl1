@@ -7,6 +7,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout repository content
+      uses: actions/checkout@v2
     - name: Install dependencies
       run: pip install poetry
     - name: install
