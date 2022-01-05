@@ -19,5 +19,3 @@ jobs:
       run: make package-install
     - name: run linter
       run: make lint
- 
-
