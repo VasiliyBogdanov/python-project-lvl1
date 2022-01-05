@@ -16,12 +16,12 @@ def progression_game(username: str):
         prog_step = random.randint(2, 9)
         progression = [i * prog_step + first_num for i in range(prog_length)]
         question_position = random.randint(0, len(progression) - 1)
+        answer = progression[question_position]
+        progression[question_position] = ".."
         output_question = "Question: "
         for i in progression:
             output_question += str(i) + " "
-        output_question = output_question\
-            .replace(str(progression[question_position]), "..")
-        return progression[question_position], output_question
+        return answer, output_question
 
     correct_answer_count = 0
     print("What number is missing in the progression?")
