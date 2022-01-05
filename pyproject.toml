@@ -1,11 +1,15 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Mathematical brain teasers with command line interface."
 authors = ["VasiliyBogdanov <moproq@icloud.com>"]
 packages = [
   { include = "brain_games" },
 ]
+classifiers = [
+    "Topic :: Games/Entertainment :: Puzzle Games"
+]
+repository = "https://github.com/VasiliyBogdanov/python-project-lvl1"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
