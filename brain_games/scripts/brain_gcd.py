@@ -2,12 +2,12 @@
 
 from brain_games.engine import engine
 from brain_games.cli import welcome_user
-from brain_games.games.brain_gcd import gcd_logic
+from brain_games.games.brain_gcd import gcd_logic, GAME_NAME
 
 
 def main():
     username = welcome_user()
-    engine(game_name='brain_gcd',
+    engine(game_name=GAME_NAME,
            username=username,
            game_logic=gcd_logic)
 

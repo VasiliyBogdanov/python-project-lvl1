@@ -1,6 +1,7 @@
 import math
 import random
 
+GAME_NAME = 'brain_gcd'
 MIN_QUESTION_NUMBER = 1
 MAX_QUESTION_NUMBER = 101
 

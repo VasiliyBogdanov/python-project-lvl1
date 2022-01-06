@@ -1,5 +1,6 @@
 import random
 
+GAME_NAME = 'brain_progression'
 MIN_QUESTION_NUMBER = 1
 MAX_QUESTION_NUMBER = 101
 MIN_PROGRESSION_LENGTH = 5

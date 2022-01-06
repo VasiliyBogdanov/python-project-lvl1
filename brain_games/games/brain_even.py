@@ -1,5 +1,6 @@
 import random
 
+GAME_NAME = 'brain_even'
 MIN_QUESTION_NUMBER = 1
 MAX_QUESTION_NUMBER = 101
 
