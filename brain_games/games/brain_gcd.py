@@ -1,26 +1,13 @@
-from brain_games.answer_checker import check_answer
 import math
 import random
-import prompt
+
+MIN_QUESTION_NUMBER = 1
+MAX_QUESTION_NUMBER = 101
 
 
-def gcd_game(username):
-    correct_answer_count = 0
-    print('Find the greatest common divisor of given numbers.')
-    while True:
-        if correct_answer_count >= 3:
-            print('Congratulations, {0}!'.format(username))
-            break
-        # Inputs to next two randint functions are arbitrary.
-        question_num1 = random.randint(1, 101)
-        question_num2 = random.randint(1, 101)
-        question = "{0} {1}".format(question_num1, question_num2)
-        print("Question: {0}".format(question))
-        user_answer = prompt.string("Your answer: ")
-        correct_answer = math.gcd(question_num1, question_num2)
-        if check_answer(user_answer=user_answer,
-                        correct_answer=str(correct_answer),
-                        username=username):
-            correct_answer_count += 1
-        else:
-            break
+def gcd_logic():
+    question_num1 = random.randint(MIN_QUESTION_NUMBER, MAX_QUESTION_NUMBER)
+    question_num2 = random.randint(MIN_QUESTION_NUMBER, MAX_QUESTION_NUMBER)
+    correct_answer = math.gcd(question_num1, question_num2)
+    question = "Question: {0} {1}".format(question_num1, question_num2)
+    return correct_answer, question
