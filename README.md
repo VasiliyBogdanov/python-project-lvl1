@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/VasiliyBogdanov/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/VasiliyBogdanov/python-project-lvl1/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e6d4dd8a3232a22f4482/maintainability)](https://codeclimate.com/github/VasiliyBogdanov/python-project-lvl1/maintainability)
 ![linter](https://github.com/VasiliyBogdanov/python-project-lvl1/actions/workflows/linter.yml/badge.svg)
 ### Installation
 [![asciicast](https://asciinema.org/a/TVrFFUqjNS5Nplxa2GUbzwScy.svg)](https://asciinema.org/a/TVrFFUqjNS5Nplxa2GUbzwScy)
