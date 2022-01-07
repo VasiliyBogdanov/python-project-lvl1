@@ -1,7 +1,7 @@
 import operator
 import random
 
-GAME_NAME = 'brain_calc'
+GAME_QUESTION = "What is the result of the expression?"
 MIN_QUESTION_NUMBER = 1
 MAX_QUESTION_NUMBER = 101
 

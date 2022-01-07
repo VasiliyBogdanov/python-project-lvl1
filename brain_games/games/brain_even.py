@@ -1,6 +1,6 @@
 import random
 
-GAME_NAME = 'brain_even'
+GAME_QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 MIN_QUESTION_NUMBER = 1
 MAX_QUESTION_NUMBER = 101
 

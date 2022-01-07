@@ -1,7 +1,7 @@
 import math
 import random
 
-GAME_NAME = 'brain_gcd'
+GAME_QUESTION = 'Find the greatest common divisor of given numbers.'
 MIN_QUESTION_NUMBER = 1
 MAX_QUESTION_NUMBER = 101
 
