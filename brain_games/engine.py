@@ -20,6 +20,7 @@ def check_answer(user_answer: str, correct_answer: str, username: str):
 
 
 def engine(game_question: str, game_logic):
+    """Run game logic."""
     username = welcome_user()
     correct_answer_count = 0
     print(game_question)
