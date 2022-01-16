@@ -22,6 +22,7 @@ def is_prime(n: int) -> bool:
 
 def prime_logic() -> (str, str):
     question_integer = random.randint(MIN_QUESTION_NUMBER, MAX_QUESTION_NUMBER)
-    correct_answer = ANSWER["yes"] if is_prime(question_integer) else ANSWER["no"]
+    correct_answer = ANSWER["yes"] if is_prime(question_integer) \
+        else ANSWER["no"]
     question = QUESTION.format(question_integer)
     return correct_answer, question

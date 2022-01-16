@@ -32,7 +32,8 @@ def check_answer(user_answer: str, correct_answer: str, username: str) -> bool:
         return False
 
 
-def engine(game_question: str, game_logic: Callable[[], tuple[str, str]]) -> None:
+def engine(game_question: str,
+           game_logic: Callable[[], tuple[str, str]]) -> None:
     username = welcome_user()
     correct_answer_count = 0
     print(game_question)
