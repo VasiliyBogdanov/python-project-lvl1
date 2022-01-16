@@ -3,9 +3,14 @@ import random
 GAME_QUESTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 MIN_QUESTION_NUMBER = 1
 MAX_QUESTION_NUMBER = 101
+QUESTION = "Question: {0}"
+ANSWER = {
+    "yes": 'yes',
+    "no": 'no'
+}
 
 
-def is_prime(n):
+def is_prime(n: int) -> bool:
     """Return True if n is a prime number."""
     if n <= 1:
         return False
@@ -15,8 +20,8 @@ def is_prime(n):
     return True
 
 
-def prime_logic():
+def prime_logic() -> (str, str):
     question_integer = random.randint(MIN_QUESTION_NUMBER, MAX_QUESTION_NUMBER)
-    correct_answer = 'yes' if is_prime(question_integer) else 'no'
-    question = "Question: {0}".format(question_integer)
+    correct_answer = ANSWER["yes"] if is_prime(question_integer) else ANSWER["no"]
+    question = QUESTION.format(question_integer)
     return correct_answer, question

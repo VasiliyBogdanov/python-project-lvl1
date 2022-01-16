@@ -4,7 +4,7 @@ from brain_games.engine import engine
 from brain_games.games.brain_progression import progression_logic, GAME_QUESTION
 
 
-def main():
+def main() -> None:
     engine(game_question=GAME_QUESTION,
            game_logic=progression_logic)
 
