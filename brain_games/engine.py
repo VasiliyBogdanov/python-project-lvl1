@@ -1,6 +1,7 @@
 import prompt
 from typing import Callable
 
+QUESTION = "Question: "
 NUMBER_OF_ROUNDS = 3
 MESSAGES = {
     "welcome": 'Welcome to the Brain Games!',
@@ -15,37 +16,41 @@ MESSAGES = {
 }
 
 
-def welcome_user() -> str:
+def welcome_user() -> None:
     print(MESSAGES["welcome"])
+
+
+def get_username() -> str:
     username = prompt.string(MESSAGES["ask_name"])
-    print(MESSAGES["greetings"].format(username))
     return username
 
 
-def check_answer(user_answer: str, correct_answer: str, username: str) -> bool:
-    if user_answer.lower() == correct_answer.lower():
-        print(MESSAGES["correct"])
-        return True
-    else:
-        print(MESSAGES["wrong"].format(user_answer, correct_answer))
-        print(MESSAGES["try_again"].format(username))
-        return False
+def greet_user(username) -> None:
+    print(MESSAGES["greetings"].format(username))
+
+
+def welcome_to_brain_games() -> None:
+    welcome_user()
+    greet_user(get_username())
 
 
 def engine(game_question: str,
            game_logic: Callable[[], tuple[str, str]]) -> None:
-    username = welcome_user()
+    welcome_user()
+    username = get_username()
+    greet_user(username)
     correct_answer_count = 0
     print(game_question)
     while correct_answer_count < NUMBER_OF_ROUNDS:
         correct_answer, question = game_logic()
         print(question)
         user_answer = prompt.string(MESSAGES["your_answer"])
-        if check_answer(user_answer=user_answer,
-                        correct_answer=correct_answer,
-                        username=username):
+        if user_answer.lower() == correct_answer.lower():
+            print(MESSAGES["correct"])
             correct_answer_count += 1
         else:
+            print(MESSAGES["wrong"].format(user_answer, correct_answer))
+            print(MESSAGES["try_again"].format(username))
             break
     else:
         print(MESSAGES["congratulations"].format(username))

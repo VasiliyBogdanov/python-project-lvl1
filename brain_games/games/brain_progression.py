@@ -1,4 +1,5 @@
 import random
+from brain_games.engine import engine, QUESTION
 
 GAME_QUESTION = "What number is missing in the progression?"
 MIN_QUESTION_NUMBER = 1
@@ -7,7 +8,6 @@ MIN_PROGRESSION_LENGTH = 5
 MAX_PROGRESSION_LENGTH = 10
 MIN_PROGRESSION_STEP = 5
 MAX_PROGRESSION_STEP = 10
-QUESTION = "Question: "
 NUM_IN_QUESTION_SYMBOL = ".."
 
 
@@ -23,3 +23,8 @@ def progression_logic() -> (str, str):
     for i in progression:
         question += str(i) + " "
     return str(correct_answer), question
+
+
+def progression_game() -> None:
+    engine(game_question=GAME_QUESTION,
+           game_logic=progression_logic)
