@@ -1,5 +1,6 @@
 import operator
 import random
+
 from brain_games.engine import engine, QUESTION
 
 GAME_QUESTION = "What is the result of the expression?"

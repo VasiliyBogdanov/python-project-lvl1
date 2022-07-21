@@ -1,5 +1,11 @@
 install:
 	poetry install
+build:
+	poetry build
+publish:
+	poetry publish --dry-run
+package-install:
+	python3 -m pip install --user dist/*.whl
 brain-games:
 	poetry run brain-games
 brain-even:
@@ -12,12 +18,6 @@ brain-progression:
 	poetry run brain-progression
 brain-prime:
 	poetry run brain-prime
-build:
-	poetry build
-publish:
-	poetry publish --dry-run
-package-install:
-	python3 -m pip install --user dist/*.whl
 lint:
 	poetry run flake8 brain_games
 .PHONY: install brain-games build publish package-install lint

@@ -1,4 +1,5 @@
 import random
+
 from brain_games.engine import engine, QUESTION
 
 GAME_QUESTION = "What number is missing in the progression?"
